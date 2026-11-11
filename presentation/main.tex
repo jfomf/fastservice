@@ -51,7 +51,7 @@
 \fill[Paper] (0,0) rectangle (160,90);
 \node[anchor=west,inner sep=0,text=Coral,font=\bfseries\fontsize{12}{14}\selectfont] at (10,84) {Ладно · Ярославль};
 \node[anchor=north west,inner sep=0,text width=75mm,align=left,text=Ink,font=\bfseries\fontsize{22}{26}\selectfont] at (10,68) {Срочный ремонт\\без поиска мастера};
-\node[anchor=north west,inner sep=0,text width=70mm,align=left,text=Ink,font=\fontsize{12}{16}\selectfont] at (10,33) {Одна заявка. Цена до выезда. Мы назначим мастера и примем работу.};
+\node[anchor=north west,inner sep=0,text width=70mm,align=left,text=Ink,font=\fontsize{12}{16}\selectfont] at (10,33) {Вы рассказываете, что сломалось. Мы называем стоимость до выезда, назначаем мастера и проверяем его работу.};
 \node[anchor=center,inner sep=0] at (119,44) {\includegraphics[width=62mm,height=59mm,keepaspectratio]{../assets/stock/pipe-repair.jpg}};
 \end{scope}\end{tikzpicture}\end{frame}
 
@@ -128,21 +128,21 @@
 
 \begin{frame}[plain]
 \slidebegin{Прозрачность}{Мастер и этапы заказа видны клиенту}{10}
-\begin{scope}
-\clip (89,16) rectangle (150,56);
-\node[anchor=center,inner sep=0] at (119.5,36) {\includegraphics[width=61mm]{../assets/stock/clean-faucet.jpg}};
-\end{scope}
-\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Карточка мастера}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Фото, специализация, предыдущие работы и отзывы.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont Заказ}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Смета, этапы и фотоотчёт.}};
+\node[anchor=north west,inner sep=0] at (10,61) {\includegraphics[width=136mm]{site-order-wide.png}};
 \slideend
 \end{frame}
 
 \begin{frame}[plain]
-\slidebegin{Категории}{Сантехника и электрика на старте}{11}
+\slidebegin{Заявки}{Какие поломки берём}{11}
 \begin{scope}
-\clip (89,16) rectangle (150,56);
-\node[anchor=center,inner sep=0] at (119.5,36) {\includegraphics[width=61mm]{../assets/stock/electrician.jpg}};
+\clip (89,16) rectangle (119,56);
+\node[anchor=center,inner sep=0] at (104,36) {\includegraphics[height=40mm]{../assets/stock/pipe-repair.jpg}};
 \end{scope}
-\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Сантехника}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Течь под раковиной, смеситель, сифон, засор.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont Электрика}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Розетка, свет, диагностика щита.}};
+\begin{scope}
+\clip (120,16) rectangle (150,56);
+\node[anchor=center,inner sep=0] at (135,36) {\includegraphics[height=40mm]{../assets/stock/electrician.jpg}};
+\end{scope}
+\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Вода}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Прорвало трубу, течёт кран или засорился слив.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont Электрика}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Пропал свет в квартире, искрит розетка или выбивает автомат.}};
 \slideend
 \end{frame}
 
@@ -204,8 +204,8 @@
 \begin{scope}[shift={(current page.south west)}]
 \fill[Paper] (0,0) rectangle (160,90);
 \node[anchor=west,inner sep=0,text=Coral,font=\bfseries\fontsize{12}{14}\selectfont] at (10,84) {Следующий шаг};
-\node[anchor=north west,inner sep=0,text width=73mm,align=left,text=Ink,font=\bfseries\fontsize{23}{27}\selectfont] at (10,64) {Пилот в Ярославле};
-\node[anchor=north west,inner sep=0,text width=72mm,align=left,text=Ink,font=\fontsize{12}{16}\selectfont] at (10,41) {Набираем дежурных мастеров, подключаем звонки и оплату, запускаем первые заявки. Проверяем скорость, точность сметы и качество ремонта.};
+\node[anchor=north west,inner sep=0,text width=73mm,align=left,text=Ink,font=\bfseries\fontsize{23}{27}\selectfont] at (10,64) {Сначала проверяем спрос};
+\node[anchor=north west,inner sep=0,text width=74mm,align=left,text=Ink,font=\fontsize{12}{16}\selectfont] at (10,41) {Настраиваем приём заявок и запускаем рекламу в нескольких районах Ярославля. Если люди обращаются, подключаем первых мастеров и начинаем выполнять заказы.};
 \node[anchor=center,inner sep=0] at (119,44) {\includegraphics[width=62mm,height=59mm,keepaspectratio]{../assets/stock/bathroom.jpg}};
 \end{scope}\end{tikzpicture}\end{frame}
 

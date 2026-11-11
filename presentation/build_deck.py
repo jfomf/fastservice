@@ -33,6 +33,16 @@ def frame(n, label, title, items, image=None, note=None):
     out += [r'\slideend', r'\end{frame}']
     return '\n'.join(out)
 
+
+def screenshot_frame(n, label, title, image):
+    return '\n'.join([
+        r'\begin{frame}[plain]',
+        rf'\slidebegin{{{label}}}{{{title}}}{{{n}}}',
+        rf'\node[anchor=north west,inner sep=0] at (10,61) {{\includegraphics[width=136mm]{{{image}}}}};',
+        r'\slideend',
+        r'\end{frame}',
+    ])
+
 slides = []
 slides.append(r'''\begin{frame}[plain]
 \begin{tikzpicture}[remember picture,overlay,x=1mm,y=1mm]
@@ -40,7 +50,7 @@ slides.append(r'''\begin{frame}[plain]
 \fill[Paper] (0,0) rectangle (160,90);
 \node[anchor=west,inner sep=0,text=Coral,font=\bfseries\fontsize{12}{14}\selectfont] at (10,84) {Ладно · Ярославль};
 \node[anchor=north west,inner sep=0,text width=75mm,align=left,text=Ink,font=\bfseries\fontsize{22}{26}\selectfont] at (10,68) {Срочный ремонт\\без поиска мастера};
-\node[anchor=north west,inner sep=0,text width=70mm,align=left,text=Ink,font=\fontsize{12}{16}\selectfont] at (10,33) {Одна заявка. Цена до выезда. Мы назначим мастера и примем работу.};
+\node[anchor=north west,inner sep=0,text width=70mm,align=left,text=Ink,font=\fontsize{12}{16}\selectfont] at (10,33) {Вы рассказываете, что сломалось. Мы называем стоимость до выезда, назначаем мастера и проверяем его работу.};
 \node[anchor=center,inner sep=0] at (119,44) {\includegraphics[width=62mm,height=59mm,keepaspectratio]{../assets/stock/pipe-repair.jpg}};
 \end{scope}\end{tikzpicture}\end{frame}''')
 slides.append(frame(2,'Проблема','Протёк сифон в воскресенье',[
@@ -75,14 +85,20 @@ slides.append(frame(9,'Качество','Приёмка по стандарту
     ('После ремонта','Проверка результата с клиентом, фото до и после, уборка.'),
     ('Ответственность','Условия гарантии и итоговая сумма фиксируются в заказе.')],
     '../assets/stock/clean-tools.jpg','Чек-лист — планируемый операционный стандарт'))
-slides.append(frame(10,'Прозрачность','Мастер и этапы заказа видны клиенту',[
-    ('Карточка мастера','Фото, специализация, предыдущие работы и отзывы.'),
-    ('Заказ','Смета, этапы и фотоотчёт.')],
-    '../assets/stock/clean-faucet.jpg','Профили и отзывы приведены для примера'))
-slides.append(frame(11,'Категории','Сантехника и электрика на старте',[
-    ('Сантехника','Течь под раковиной, смеситель, сифон, засор.'),
-    ('Электрика','Розетка, свет, диагностика щита.')],
-    '../assets/stock/electrician.jpg','Две категории для пилота в Ярославле'))
+slides.append(screenshot_frame(10,'Прозрачность','Мастер и этапы заказа видны клиенту','site-order-wide.png'))
+slides.append(r'''\begin{frame}[plain]
+\slidebegin{Заявки}{Какие поломки берём}{11}
+\begin{scope}
+\clip (89,16) rectangle (119,56);
+\node[anchor=center,inner sep=0] at (104,36) {\includegraphics[height=40mm]{../assets/stock/pipe-repair.jpg}};
+\end{scope}
+\begin{scope}
+\clip (120,16) rectangle (150,56);
+\node[anchor=center,inner sep=0] at (135,36) {\includegraphics[height=40mm]{../assets/stock/electrician.jpg}};
+\end{scope}
+\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Вода}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Прорвало трубу, течёт кран или засорился слив.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont Электрика}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Пропал свет в квартире, искрит розетка или выбивает автомат.}};
+\slideend
+\end{frame}''')
 slides.append(frame(12,'Скорость','Цель пилота: выезд за час',[
     ('При свободном мастере','Диспетчер подтверждает время до выезда.'),
     ('Выходные и праздники','Нужны дежурства и резерв. Если окно занято, сразу назовём доступное время.')],
@@ -114,8 +130,8 @@ slides.append(r'''\begin{frame}[plain]
 \begin{scope}[shift={(current page.south west)}]
 \fill[Paper] (0,0) rectangle (160,90);
 \node[anchor=west,inner sep=0,text=Coral,font=\bfseries\fontsize{12}{14}\selectfont] at (10,84) {Следующий шаг};
-\node[anchor=north west,inner sep=0,text width=73mm,align=left,text=Ink,font=\bfseries\fontsize{23}{27}\selectfont] at (10,64) {Пилот в Ярославле};
-\node[anchor=north west,inner sep=0,text width=72mm,align=left,text=Ink,font=\fontsize{12}{16}\selectfont] at (10,41) {Набираем дежурных мастеров, подключаем звонки и оплату, запускаем первые заявки. Проверяем скорость, точность сметы и качество ремонта.};
+\node[anchor=north west,inner sep=0,text width=73mm,align=left,text=Ink,font=\bfseries\fontsize{23}{27}\selectfont] at (10,64) {Сначала проверяем спрос};
+\node[anchor=north west,inner sep=0,text width=74mm,align=left,text=Ink,font=\fontsize{12}{16}\selectfont] at (10,41) {Настраиваем приём заявок и запускаем рекламу в нескольких районах Ярославля. Если люди обращаются, подключаем первых мастеров и начинаем выполнять заказы.};
 \node[anchor=center,inner sep=0] at (119,44) {\includegraphics[width=62mm,height=59mm,keepaspectratio]{../assets/stock/bathroom.jpg}};
 \end{scope}\end{tikzpicture}\end{frame}''')
 
