@@ -23,6 +23,15 @@ presentation/site-*.png
 .gemini/
 DESIGN.md
 PRODUCT.md
-presentation/
+presentation/*
+!presentation/main.pdf
+!presentation/main.tex
+!presentation/build_deck.py
+!presentation/SPEAKER_NOTES.md
+!presentation/fonts/
+!presentation/site-home-crop.png
+!presentation/site-quote-crop.png
+!presentation/site-dispatcher-crop.png
+!presentation/site-estimate.png
 slides.md
 Школа_молодого_предпринимателя_Шаблон_защиты_Демо_день_2026_ФИНАЛЬНЫЙ.pdf
