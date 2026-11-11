@@ -24,7 +24,7 @@ presentation/site-*.png
 DESIGN.md
 PRODUCT.md
 presentation/*
-!presentation/main.pdf
+!presentation/ladno-accelerator.pdf
 !presentation/main.tex
 !presentation/build_deck.py
 !presentation/SPEAKER_NOTES.md

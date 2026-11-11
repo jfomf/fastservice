@@ -26,4 +26,4 @@
 
 ## Презентация
 
-[PDF](presentation/ladno-aligned.pdf?v=2) (18 слайдов) · [текст выступления](presentation/SPEAKER_NOTES.md). Исходник — `presentation/main.tex`; пересборка: `python presentation/build_deck.py`, затем `tectonic main.tex` из каталога `presentation`.
+[PDF](presentation/ladno-accelerator.pdf) (18 слайдов) · [текст выступления](presentation/SPEAKER_NOTES.md). Исходник — `presentation/main.tex`; пересборка: `python presentation/build_deck.py`, затем `tectonic main.tex` из каталога `presentation`. Полученный PDF сохраняется как `ladno-accelerator.pdf`.
