@@ -25,15 +25,14 @@
 \exhyphenpenalty=10000
 \tolerance=10000
 
-% Координаты 160 × 90 мм. Короткие карточки повторяют логику шаблона защиты.
+% Координаты 160 × 90 мм. Общая сетка для всех содержательных слайдов.
 \newcommand{\slidebegin}[3]{%
   \begin{tikzpicture}[remember picture,overlay,x=1mm,y=1mm]
   \begin{scope}[shift={(current page.south west)}]
   \fill[Paper] (0,0) rectangle (160,90);
-  \node[anchor=west,text=Coral,font=\bfseries\fontsize{12}{14}\selectfont] at (10,84) {#1};
-  \node[anchor=north west,text width=140mm,align=left,text=Ink,font=\bfseries\fontsize{18}{21}\selectfont] at (10,78) {#2};
-  \draw[Line,line width=.35mm] (10,10) -- (150,10);
-  \node[anchor=east,text=Muted,font=\fontsize{10}{12}\selectfont] at (150,5.6) {#3 / 18};
+  \node[anchor=west,text=Coral,font=\bfseries\fontsize{10.5}{12}\selectfont] at (10,84) {#1};
+  \node[anchor=north west,text width=140mm,align=left,text=Ink,font=\bfseries\fontsize{18}{21}\selectfont] at (10,76) {#2};
+  \node[anchor=east,text=Muted,font=\fontsize{8}{9.5}\selectfont] at (150,5.2) {#3 / 18};
 }
 \newcommand{\slideend}{%
   \end{scope}
@@ -53,199 +52,151 @@
 \node[anchor=west,text=Coral,font=\bfseries\fontsize{12}{14}\selectfont] at (10,84) {Ладно · Ярославль};
 \node[anchor=north west,text width=75mm,align=left,text=Ink,font=\bfseries\fontsize{24}{28}\selectfont] at (10,65) {Ремонт дома\\без поиска мастера};
 \node[anchor=north west,text width=70mm,align=left,text=Ink,font=\fontsize{12}{16}\selectfont] at (10,38) {Одна заявка. Смета до выезда. Мы сами организуем мастера и проверим работу.};
-\node[anchor=west,text=Muted,font=\fontsize{10}{12}\selectfont] at (10,13) {План пилота · демо-день 2026};
+\node[anchor=west,text=Muted,font=\fontsize{10}{12}\selectfont] at (10,13) {Демо-день 2026};
 \node[anchor=center,inner sep=0] at (119,44) {\includegraphics[width=62mm,height=59mm,keepaspectratio]{../assets/stock/pipe-repair.jpg}};
 \end{scope}\end{tikzpicture}\end{frame}
 
 \begin{frame}[plain]
-\slidebegin{Проблема}{В воскресенье течёт сифон. Мастера ещё нет}{2}
+\slidebegin{Проблема}{Протёк сифон в воскресенье}{2}
 \begin{scope}
-\clip (88,16) rectangle (150,64);
-\node[anchor=center,inner sep=0] at (119,40) {\includegraphics[height=48mm]{../assets/stock/tap.jpg}};
+\clip (89,16) rectangle (150,56);
+\node[anchor=center,inner sep=0] at (119.5,36) {\includegraphics[width=61mm]{../assets/stock/tap.jpg}};
 \end{scope}
-\labeltext{10}{59}{70}{Что делает клиент}
-\bodytext{10}{51}{70}{Открывает площадку, сравнивает профили и пишет нескольким людям.}
-\labeltext{10}{33}{70}{Что остаётся неизвестным}
-\bodytext{10}{25}{70}{Кто сможет приехать сегодня, сколько будет стоить ремонт и кто отвечает за результат.}
+\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Клиент}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Ищет мастера, сравнивает профили и пишет нескольким людям.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont Неизвестно}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Кто приедет сегодня, сколько стоит ремонт и кто отвечает за результат.}};
 \slideend
 \end{frame}
 
 \begin{frame}[plain]
-\slidebegin{Сейчас}{Клиент сам ведёт весь процесс}{3}
+\slidebegin{Сейчас}{Клиент сам ведёт заказ}{3}
 \begin{scope}
-\clip (88,16) rectangle (150,64);
-\node[anchor=center,inner sep=0] at (119,40) {\includegraphics[height=48mm]{../assets/stock/fuse-box.jpg}};
+\clip (89,16) rectangle (150,56);
+\node[anchor=center,inner sep=0] at (119.5,36) {\includegraphics[height=40mm]{../assets/stock/fuse-box.jpg}};
 \end{scope}
-\labeltext{10}{59}{70}{Поиск и согласование}
-\bodytext{10}{51}{70}{Выбирает площадку, пишет мастерам, ждёт цену и время приезда.}
-\labeltext{10}{33}{70}{Приёмка}
-\bodytext{10}{25}{70}{Сам проверяет работу и решает спорные вопросы.}
+\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Поиск и согласование}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Выбирает площадку, пишет мастерам, ждёт цену и время приезда.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont Приёмка}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Сам проверяет работу и решает спорные вопросы.}};
 \slideend
 \end{frame}
 
 \begin{frame}[plain]
 \slidebegin{Решение}{Клиенту достаточно одной заявки}{4}
-\node[anchor=center,inner sep=0] at (119,40) {\includegraphics[width=61mm,height=48mm,keepaspectratio]{site-home-crop.png}};
-\labeltext{10}{59}{70}{Клиент}
-\bodytext{10}{51}{70}{Описывает поломку, прикладывает фото и оставляет телефон.}
-\labeltext{10}{33}{70}{Ладно}
-\bodytext{10}{25}{70}{Готовит смету, назначает мастера и ведёт заказ до результата.}
+\node[anchor=center,inner sep=0] at (119.5,36) {\includegraphics[width=61mm,height=40mm,keepaspectratio]{site-home-crop.png}};
+\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Клиент}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Описывает поломку, прикладывает фото и оставляет телефон.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont Ладно}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Готовит смету, назначает мастера и ведёт заказ до результата.}};
 \slideend
 \end{frame}
 
 \begin{frame}[plain]
 \slidebegin{После заявки}{Цель пилота: ответ за 5 минут}{5}
 \begin{scope}
-\clip (88,16) rectangle (150,64);
-\node[anchor=center,inner sep=0] at (119,40) {\includegraphics[height=48mm]{../assets/stock/worker3.jpg}};
+\clip (89,16) rectangle (150,56);
+\node[anchor=center,inner sep=0] at (119.5,36) {\includegraphics[width=61mm]{../assets/stock/worker3.jpg}};
 \end{scope}
-\labeltext{10}{59}{70}{Первые минуты}
-\bodytext{10}{51}{70}{Оператор принимает заявку и звонит клиенту.}
-\labeltext{10}{33}{70}{До выезда}
-\bodytext{10}{25}{70}{Главный мастер готовит смету. Диспетчер назначает исполнителя.}
+\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Первые минуты}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Оператор принимает заявку и звонит клиенту.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont До выезда}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Главный мастер готовит смету. Диспетчер назначает исполнителя.}};
 \slideend
 \end{frame}
 
 \begin{frame}[plain]
-\slidebegin{Цена}{Смета видна до приезда мастера}{6}
-\node[anchor=center,inner sep=0] at (119,40) {\includegraphics[width=61mm,height=48mm,keepaspectratio]{site-quote-crop.png}};
-\labeltext{10}{59}{70}{В примере заказа}
-\bodytext{10}{51}{70}{Выезд и диагностика — 900 ₽, работа — 1 600 ₽, материалы — 350 ₽.}
-\labeltext{10}{33}{70}{Итого}
-\bodytext{10}{25}{70}{2 850 ₽ до выезда. Другую работу согласуют отдельно.}
+\slidebegin{Цена}{Смета до выезда}{6}
+\node[anchor=center,inner sep=0] at (119.5,36) {\includegraphics[width=61mm,height=40mm,keepaspectratio]{site-quote-crop.png}};
+\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Пример расчёта}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Выезд и диагностика 900 ₽; работа 1 600 ₽; материалы 350 ₽.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont Итого 2 850 ₽}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Другие работы согласуют отдельно.}};
 \slideend
 \end{frame}
 
 \begin{frame}[plain]
-\slidebegin{Диспетчерская}{Поиск и замена мастера — наша работа}{7}
-\node[anchor=center,inner sep=0] at (119,40) {\includegraphics[width=61mm,height=48mm,keepaspectratio]{site-dispatcher-crop.png}};
-\labeltext{10}{59}{70}{Назначение}
-\bodytext{10}{51}{70}{Диспетчер видит фото, адрес, срочность и смету в одном заказе.}
-\labeltext{10}{33}{70}{Отказ исполнителя}
-\bodytext{10}{25}{70}{Система предлагает следующего подходящего мастера; клиент не начинает поиск заново.}
+\slidebegin{Диспетчерская}{Мастера назначает диспетчер}{7}
+\node[anchor=center,inner sep=0] at (119.5,36) {\includegraphics[width=61mm,height=40mm,keepaspectratio]{site-dispatcher-crop.png}};
+\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Назначение}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Диспетчер видит фото, адрес, срочность и смету в одном заказе.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont Отказ исполнителя}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Система предлагает следующего подходящего мастера; клиент не начинает поиск заново.}};
 \slideend
 \end{frame}
 
 \begin{frame}[plain]
-\slidebegin{Исполнители}{Мастера работают по одному стандарту}{8}
+\slidebegin{Исполнители}{Единый стандарт для мастеров}{8}
 \begin{scope}
-\clip (88,16) rectangle (150,64);
-\node[anchor=center,inner sep=0] at (119,40) {\includegraphics[width=62mm]{../assets/stock/socket-work.jpg}};
+\clip (89,16) rectangle (150,56);
+\node[anchor=center,inner sep=0] at (119.5,36) {\includegraphics[width=61mm]{../assets/stock/socket-work.jpg}};
 \end{scope}
-\labeltext{10}{59}{70}{До допуска}
-\bodytext{10}{51}{70}{Проверяем навыки и обучаем работе по чек-листу.}
-\labeltext{10}{33}{70}{На заказе}
-\bodytext{10}{25}{70}{Заранее знает задачу. После ремонта показывает результат и убирает мусор.}
+\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont До допуска}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Проверяем навыки и обучаем приёмке заказа.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont На заказе}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Заранее знает задачу. После ремонта показывает результат и убирает мусор.}};
 \slideend
 \end{frame}
 
 \begin{frame}[plain]
-\slidebegin{Качество}{Приёмка по чек-листу}{9}
+\slidebegin{Качество}{Приёмка по стандарту}{9}
 \begin{scope}
-\clip (88,16) rectangle (150,64);
-\node[anchor=center,inner sep=0] at (119,40) {\includegraphics[width=62mm]{../assets/stock/clean-tools.jpg}};
+\clip (89,16) rectangle (150,56);
+\node[anchor=center,inner sep=0] at (119.5,36) {\includegraphics[width=61mm]{../assets/stock/clean-tools.jpg}};
 \end{scope}
-\labeltext{10}{59}{70}{После ремонта}
-\bodytext{10}{51}{70}{Проверка результата с клиентом, фото до и после, уборка.}
-\labeltext{10}{33}{70}{Ответственность}
-\bodytext{10}{25}{70}{Условия гарантии и итоговая сумма фиксируются в заказе.}
+\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont После ремонта}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Проверка результата с клиентом, фото до и после, уборка.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont Ответственность}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Условия гарантии и итоговая сумма фиксируются в заказе.}};
 \slideend
 \end{frame}
 
 \begin{frame}[plain]
-\slidebegin{Прозрачность}{Клиент видит, кто едет и что уже сделано}{10}
+\slidebegin{Прозрачность}{Мастер и этапы заказа видны клиенту}{10}
 \begin{scope}
-\clip (88,16) rectangle (150,64);
-\node[anchor=center,inner sep=0] at (119,40) {\includegraphics[width=62mm]{../assets/stock/clean-faucet.jpg}};
+\clip (89,16) rectangle (150,56);
+\node[anchor=center,inner sep=0] at (119.5,36) {\includegraphics[width=61mm]{../assets/stock/clean-faucet.jpg}};
 \end{scope}
-\labeltext{10}{59}{70}{Карточка мастера}
-\bodytext{10}{51}{70}{Фото, специализация, предыдущие работы и отзывы.}
-\labeltext{10}{33}{70}{Заказ}
-\bodytext{10}{25}{70}{Смета, этапы и фотоотчёт.}
+\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Карточка мастера}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Фото, специализация, предыдущие работы и отзывы.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont Заказ}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Смета, этапы и фотоотчёт.}};
 \slideend
 \end{frame}
 
 \begin{frame}[plain]
-\slidebegin{Категории}{На старте — сантехника и электрика}{11}
+\slidebegin{Категории}{Сантехника и электрика на старте}{11}
 \begin{scope}
-\clip (88,16) rectangle (150,64);
-\node[anchor=center,inner sep=0] at (119,40) {\includegraphics[height=48mm]{../assets/stock/electrician.jpg}};
+\clip (89,16) rectangle (150,56);
+\node[anchor=center,inner sep=0] at (119.5,36) {\includegraphics[width=61mm]{../assets/stock/electrician.jpg}};
 \end{scope}
-\labeltext{10}{59}{70}{Сантехника}
-\bodytext{10}{51}{70}{Течь под раковиной, смеситель, сифон, засор.}
-\labeltext{10}{33}{70}{Электрика}
-\bodytext{10}{25}{70}{Розетка, свет, диагностика щита.}
+\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Сантехника}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Течь под раковиной, смеситель, сифон, засор.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont Электрика}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Розетка, свет, диагностика щита.}};
 \slideend
 \end{frame}
 
 \begin{frame}[plain]
-\slidebegin{Скорость}{Выезд за час — цель пилота}{12}
+\slidebegin{Скорость}{Цель пилота: выезд за час}{12}
 \begin{scope}
-\clip (88,16) rectangle (150,64);
-\node[anchor=center,inner sep=0] at (119,40) {\includegraphics[width=62mm]{../assets/stock/valves.jpg}};
+\clip (89,16) rectangle (150,56);
+\node[anchor=center,inner sep=0] at (119.5,36) {\includegraphics[width=61mm]{../assets/stock/valves.jpg}};
 \end{scope}
-\labeltext{10}{59}{70}{При свободном мастере}
-\bodytext{10}{51}{70}{Диспетчер подтверждает время до выезда.}
-\labeltext{10}{33}{70}{Выходные и праздники}
-\bodytext{10}{25}{70}{Нужны дежурства и резерв. Если окно занято, сразу назовём доступное время.}
+\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont При свободном мастере}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Диспетчер подтверждает время до выезда.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont Выходные и праздники}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Нужны дежурства и резерв. Если окно занято, сразу назовём доступное время.}};
 \slideend
 \end{frame}
 
 \begin{frame}[plain]
 \slidebegin{Ярославль}{Пилот по районам Ярославля}{13}
 \begin{scope}
-\clip (88,16) rectangle (150,64);
-\node[anchor=center,inner sep=0] at (119,40) {\includegraphics[width=62mm]{../assets/stock/yaroslavl.jpg}};
+\clip (89,16) rectangle (150,56);
+\node[anchor=center,inner sep=0] at (119.5,36) {\includegraphics[width=61mm]{../assets/stock/yaroslavl.jpg}};
 \end{scope}
-\labeltext{10}{59}{70}{Первый контур}
-\bodytext{10}{51}{70}{Кировский, Ленинский и Фрунзенский районы: проверяем маршруты и доступность мастеров.}
-\labeltext{10}{33}{70}{Затем}
-\bodytext{10}{25}{70}{Расширение на Дзержинский и Красноперекопский районы после замера времени выезда.}
+\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Первый контур}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Кировский, Ленинский и Фрунзенский районы: проверяем маршруты и доступность мастеров.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont Затем}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Расширение на Дзержинский и Красноперекопский районы после замера времени выезда.}};
 \slideend
 \end{frame}
 
 \begin{frame}[plain]
-\slidebegin{Первые заявки}{Яндекс Директ, Карты, 2ГИС и Авито}{14}
-\labeltext{10}{61}{138}{Яндекс Директ}
-\bodytext{10}{53}{138}{Поисковые объявления по запросам «сантехник срочно Ярославль», «электрик на дом Ярославль».}
-\labeltext{10}{44}{138}{Карты}
-\bodytext{10}{36}{138}{Карточки сервиса в Яндекс Картах и 2ГИС: услуги, часы работы, зона выезда, телефон.}
-\labeltext{10}{27}{138}{Локально}
-\bodytext{10}{19}{138}{Объявления Авито по двум категориям и рекомендации после выполненных заказов.}
+\slidebegin{Первые заявки}{Каналы первых заявок}{14}
+\node[anchor=north west,text width=42mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Яндекс Директ}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Поисковые объявления по запросам «сантехник срочно Ярославль», «электрик на дом Ярославль».}};
+\node[anchor=north west,text width=42mm,align=left,inner sep=0] at (59,56) {{\bfseries\fontsize{11.5}{14}\selectfont Карты}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Карточки сервиса в Яндекс Картах и 2ГИС: услуги, часы работы, зона выезда, телефон.}};
+\node[anchor=north west,text width=42mm,align=left,inner sep=0] at (108,56) {{\bfseries\fontsize{11.5}{14}\selectfont Локально}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Объявления Авито по двум категориям и рекомендации после выполненных заказов.}};
 \slideend
 \end{frame}
 
 \begin{frame}[plain]
-\slidebegin{Роли}{Кто отвечает за каждый шаг}{15}
+\slidebegin{Роли}{Кто ведёт заказ}{15}
 \begin{scope}
-\clip (88,16) rectangle (150,64);
-\node[anchor=center,inner sep=0] at (119,40) {\includegraphics[width=62mm]{../assets/stock/electric-panel.jpg}};
+\clip (89,16) rectangle (150,56);
+\node[anchor=center,inner sep=0] at (119.5,36) {\includegraphics[width=61mm]{../assets/stock/electric-panel.jpg}};
 \end{scope}
-\labeltext{10}{59}{70}{Оператор и диспетчер}
-\bodytext{10}{51}{70}{Принимают заявку, назначают мастера и следят за временем.}
-\labeltext{10}{33}{70}{Главный мастер}
-\bodytext{10}{25}{70}{Проверяет смету, обучает исполнителей и контролирует сложные случаи.}
+\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Оператор и диспетчер}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Принимают заявку, назначают мастера и следят за временем.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont Главный мастер}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Проверяет смету, обучает исполнителей и контролирует сложные случаи.}};
 \slideend
 \end{frame}
 
 \begin{frame}[plain]
 \slidebegin{Оплата}{Одна оплата за весь заказ}{16}
-\node[anchor=center,inner sep=0] at (119,40) {\includegraphics[width=61mm,height=48mm,keepaspectratio]{site-estimate.png}};
-\labeltext{10}{59}{70}{Единый заказ}
-\bodytext{10}{51}{70}{Сумма и состав работ видны до выезда. После ремонта — одна оплата.}
-\labeltext{10}{33}{70}{В демо}
-\bodytext{10}{25}{70}{Оплата отмечается вручную. Платежи пока не подключены.}
+\node[anchor=center,inner sep=0] at (119.5,36) {\includegraphics[width=61mm,height=40mm,keepaspectratio]{site-estimate.png}};
+\node[anchor=north west,text width=70mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Единый заказ}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Сумма и состав работ видны до выезда. После ремонта клиент платит один раз.}\par\vspace{6mm}{\bfseries\fontsize{11.5}{14}\selectfont В демо}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Оплата отмечается вручную. Платежи пока не подключены.}};
 \slideend
 \end{frame}
 
 \begin{frame}[plain]
 \slidebegin{Пилот}{Что измерим в пилоте}{17}
-\labeltext{10}{61}{138}{Скорость}
-\bodytext{10}{53}{138}{Время от заявки до ответа и от заявки до приезда по каждому району.}
-\labeltext{10}{44}{138}{Цена}
-\bodytext{10}{36}{138}{Сколько смет меняется после осмотра и почему.}
-\labeltext{10}{27}{138}{Качество}
-\bodytext{10}{19}{138}{Повторные обращения, выполнение чек-листа и отзывы клиентов.}
+\node[anchor=north west,text width=42mm,align=left,inner sep=0] at (10,56) {{\bfseries\fontsize{11.5}{14}\selectfont Скорость}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Время от заявки до ответа и от заявки до приезда по каждому району.}};
+\node[anchor=north west,text width=42mm,align=left,inner sep=0] at (59,56) {{\bfseries\fontsize{11.5}{14}\selectfont Цена}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Сколько смет меняется после осмотра и почему.}};
+\node[anchor=north west,text width=42mm,align=left,inner sep=0] at (108,56) {{\bfseries\fontsize{11.5}{14}\selectfont Качество}\par\vspace{2mm}{\fontsize{10.5}{13}\selectfont Повторные обращения, выполнение чек-листа и отзывы клиентов.}};
 \slideend
 \end{frame}
 
