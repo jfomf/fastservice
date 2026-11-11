@@ -38,9 +38,9 @@ slides.append(r'''\begin{frame}[plain]
 \begin{tikzpicture}[remember picture,overlay,x=1mm,y=1mm]
 \begin{scope}[shift={(current page.south west)}]
 \fill[Paper] (0,0) rectangle (160,90);
-\node[anchor=west,text=Coral,font=\bfseries\fontsize{12}{14}\selectfont] at (10,84) {Ладно · Ярославль};
-\node[anchor=north west,text width=75mm,align=left,text=Ink,font=\bfseries\fontsize{22}{26}\selectfont] at (10,68) {Срочный ремонт\\без поиска мастера};
-\node[anchor=north west,text width=70mm,align=left,text=Ink,font=\fontsize{12}{16}\selectfont] at (10,33) {Одна заявка. Цена до выезда. Мы назначим мастера и примем работу.};
+\node[anchor=west,inner sep=0,text=Coral,font=\bfseries\fontsize{12}{14}\selectfont] at (10,84) {Ладно · Ярославль};
+\node[anchor=north west,inner sep=0,text width=75mm,align=left,text=Ink,font=\bfseries\fontsize{22}{26}\selectfont] at (10,68) {Срочный ремонт\\без поиска мастера};
+\node[anchor=north west,inner sep=0,text width=70mm,align=left,text=Ink,font=\fontsize{12}{16}\selectfont] at (10,33) {Одна заявка. Цена до выезда. Мы назначим мастера и примем работу.};
 \node[anchor=center,inner sep=0] at (119,44) {\includegraphics[width=62mm,height=59mm,keepaspectratio]{../assets/stock/pipe-repair.jpg}};
 \end{scope}\end{tikzpicture}\end{frame}''')
 slides.append(frame(2,'Проблема','Протёк сифон в воскресенье',[
@@ -113,9 +113,9 @@ slides.append(r'''\begin{frame}[plain]
 \begin{tikzpicture}[remember picture,overlay,x=1mm,y=1mm]
 \begin{scope}[shift={(current page.south west)}]
 \fill[Paper] (0,0) rectangle (160,90);
-\node[anchor=west,text=Coral,font=\bfseries\fontsize{12}{14}\selectfont] at (10,84) {Следующий шаг};
-\node[anchor=north west,text width=73mm,align=left,text=Ink,font=\bfseries\fontsize{23}{27}\selectfont] at (10,64) {Пилот в Ярославле};
-\node[anchor=north west,text width=72mm,align=left,text=Ink,font=\fontsize{12}{16}\selectfont] at (10,41) {Набираем дежурных мастеров, подключаем звонки и оплату, запускаем первые заявки. Проверяем скорость, точность сметы и качество ремонта.};
+\node[anchor=west,inner sep=0,text=Coral,font=\bfseries\fontsize{12}{14}\selectfont] at (10,84) {Следующий шаг};
+\node[anchor=north west,inner sep=0,text width=73mm,align=left,text=Ink,font=\bfseries\fontsize{23}{27}\selectfont] at (10,64) {Пилот в Ярославле};
+\node[anchor=north west,inner sep=0,text width=72mm,align=left,text=Ink,font=\fontsize{12}{16}\selectfont] at (10,41) {Набираем дежурных мастеров, подключаем звонки и оплату, запускаем первые заявки. Проверяем скорость, точность сметы и качество ремонта.};
 \node[anchor=center,inner sep=0] at (119,44) {\includegraphics[width=62mm,height=59mm,keepaspectratio]{../assets/stock/bathroom.jpg}};
 \end{scope}\end{tikzpicture}\end{frame}''')
 
