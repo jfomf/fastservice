@@ -44,6 +44,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .quick-copy h1 span { color: #ed5539; }
 .quick-copy>p { max-width: 530px; margin: 0 0 19px; font-size: 21px; line-height: 1.38; }
 .quick-loc { font-size: 14px; font-weight: 700; color: #ab422d; }
+.quick-promise { max-width: 520px; padding-top: 12px; color: var(--muted); font-size: 15px; }
 .quick-form { padding: 30px; border-radius: 20px; background: #f0f1e9; box-shadow: 0 16px 38px #20231f14; }
 .quick-form h2 { margin: 0 0 19px; font-size: 27px; font-weight: 700; letter-spacing: -.025em; }
 .quick-service { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-bottom: 15px; }
@@ -64,6 +65,16 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .quick-submit { width: 100%; min-height: 58px; margin-top: 21px; font-size: 16px; }
 .thumbs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 13px; }
 .thumb { width: 100px; height: 90px; object-fit: cover; border-radius: 10px; cursor: pointer; }
+
+.service-proof { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1fr); gap: clamp(30px,6vw,90px); align-items: center; padding: 42px 0 85px; border-top: 1px solid var(--line); }
+.service-proof>img { display: block; width: 100%; height: 500px; object-fit: cover; object-position: center 46%; border-radius: 22px; }
+.service-proof-copy h2 { max-width: 590px; margin: 0 0 18px; font-size: clamp(30px,3.5vw,46px); line-height: 1.1; letter-spacing: -.03em; }
+.service-proof-copy>p { max-width: 590px; margin: 0 0 25px; font-size: 18px; line-height: 1.45; }
+.proof-lines { border-top: 1px solid var(--line); }
+.proof-lines>div { display: grid; grid-template-columns: 190px 1fr; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.proof-lines strong { font-size: 16px; }
+.proof-lines span { color: var(--muted); }
+.service-proof-copy .proof-note { margin: 20px 0 0; color: var(--muted); font-size: 13px; }
 
 .demo-preview { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1fr); align-items: center; gap: 6vw; padding: 65px 0 100px; border-top: 1px solid var(--line); }
 .demo-preview h2 { margin: 0; font-size: clamp(28px,3vw,38px); font-weight: 700; line-height: 1.12; letter-spacing: -.025em; }
@@ -191,6 +202,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .quick-copy h1 { margin-bottom: 11px; font-size: 46px; }
   .quick-copy>p { margin-bottom: 10px; font-size: 17px; }
   .demo-preview { grid-template-columns: 1fr; gap: 20px; padding: 37px 0 70px; }
+  .service-proof { grid-template-columns: 1fr; gap: 26px; padding: 30px 0 65px; }
+  .service-proof>img { height: 380px; }
   .flow-grid, .admin-layout { grid-template-columns: 1fr; }
   .aside-panel { position: static; }
   .metrics { grid-template-columns: repeat(3,1fr); }
@@ -202,6 +215,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .quick-hero { gap: 14px; padding: 13px 0 46px; }
   .quick-copy h1 { font-size: 43px; }
   .quick-copy>p { font-size: 16px; }
+  .quick-promise { padding-top: 6px; font-size: 13px; }
+  .service-proof>img { height: 260px; }
+  .service-proof-copy h2 { font-size: 30px; }
+  .service-proof-copy>p { font-size: 16px; }
+  .proof-lines>div { grid-template-columns: 1fr; gap: 3px; padding: 13px 0; }
   .quick-loc { font-size: 12px; }
   .quick-form { padding: 16px; }
   .quick-form h2 { margin-bottom: 10px; font-size: 23px; }
